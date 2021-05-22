@@ -26,7 +26,7 @@ class FlightSearch(APIView):
 
     def get(self, request):
         flights = Flight.objects.all()
-        serializer = FlightSerializer(flights, many=True)
+        serializer = FlightSerializer(flights,  many=True)
         return Response(serializer.data)
 
     def post(self, request):
